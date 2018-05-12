@@ -10,6 +10,7 @@
 		E7EB4B1920A6C9E700B65DA7 /* XKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB4B0F20A6C9E700B65DA7 /* XKey.framework */; };
 		E7EB4B1E20A6C9E700B65DA7 /* XKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB4B1D20A6C9E700B65DA7 /* XKeyTests.swift */; };
 		E7EB4B2020A6C9E700B65DA7 /* XKey.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EB4B1220A6C9E700B65DA7 /* XKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7EB4B2A20A6CA6400B65DA7 /* XKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB4B2920A6CA6400B65DA7 /* XKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		E7EB4B1820A6C9E700B65DA7 /* XKeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XKeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EB4B1D20A6C9E700B65DA7 /* XKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XKeyTests.swift; sourceTree = "<group>"; };
 		E7EB4B1F20A6C9E700B65DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7EB4B2920A6CA6400B65DA7 /* XKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EB4B1220A6C9E700B65DA7 /* XKey.h */,
+				E7EB4B2920A6CA6400B65DA7 /* XKey.swift */,
 				E7EB4B1320A6C9E700B65DA7 /* Info.plist */,
 			);
 			path = XKey;
@@ -108,6 +111,7 @@
 				E7EB4B0B20A6C9E700B65DA7 /* Frameworks */,
 				E7EB4B0C20A6C9E700B65DA7 /* Headers */,
 				E7EB4B0D20A6C9E700B65DA7 /* Resources */,
+				E7EB4B2B20A6CAE900B65DA7 /* [Swiftlint] Run Script */,
 			);
 			buildRules = (
 			);
@@ -148,6 +152,7 @@
 				TargetAttributes = {
 					E7EB4B0E20A6C9E700B65DA7 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					E7EB4B1720A6C9E700B65DA7 = {
 						CreatedOnToolsVersion = 9.3;
@@ -189,11 +194,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E7EB4B2B20A6CAE900B65DA7 /* [Swiftlint] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[Swiftlint] Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E7EB4B0A20A6C9E700B65DA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EB4B2A20A6CA6400B65DA7 /* XKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +361,12 @@
 		E7EB4B2420A6C9E700B65DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -357,6 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.XKey;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -364,11 +389,12 @@
 		E7EB4B2520A6C9E700B65DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -390,9 +416,11 @@
 		E7EB4B2720A6C9E700B65DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XKeyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +429,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.XKeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -408,9 +437,11 @@
 		E7EB4B2820A6C9E700B65DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DEQGLB9PU4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XKeyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,6 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.natmark.XKeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
