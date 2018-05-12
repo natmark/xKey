@@ -1,0 +1,11 @@
+osx_image: xcode9.1
+language: objective-c
+branches:
+  only:
+    - master
+before_install:
+    - gem install xcpretty
+before_script:
+    - set -o pipefail
+script:
+    - xcodebuild test -project ./XKey.xcodeproj -scheme XKeyTests -configuration Debug | xcpretty -c
