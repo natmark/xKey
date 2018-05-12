@@ -12,6 +12,7 @@
 		E7EB4B2020A6C9E700B65DA7 /* XKey.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EB4B1220A6C9E700B65DA7 /* XKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7EB4B2A20A6CA6400B65DA7 /* XKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB4B2920A6CA6400B65DA7 /* XKey.swift */; };
 		E7EB4B5920A6D59E00B65DA7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB4B5820A6D59E00B65DA7 /* Key.swift */; };
+		E7EB4B5D20A6FE0200B65DA7 /* KeyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB4B5C20A6FE0200B65DA7 /* KeyLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		E7EB4B1F20A6C9E700B65DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EB4B2920A6CA6400B65DA7 /* XKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XKey.swift; sourceTree = "<group>"; };
 		E7EB4B5820A6D59E00B65DA7 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		E7EB4B5C20A6FE0200B65DA7 /* KeyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E7EB4B1220A6C9E700B65DA7 /* XKey.h */,
 				E7EB4B2920A6CA6400B65DA7 /* XKey.swift */,
 				E7EB4B5820A6D59E00B65DA7 /* Key.swift */,
+				E7EB4B5C20A6FE0200B65DA7 /* KeyLogger.swift */,
 				E7EB4B1320A6C9E700B65DA7 /* Info.plist */,
 			);
 			path = XKey;
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EB4B2A20A6CA6400B65DA7 /* XKey.swift in Sources */,
+				E7EB4B5D20A6FE0200B65DA7 /* KeyLogger.swift in Sources */,
 				E7EB4B5920A6D59E00B65DA7 /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
