@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import XKey
 
 class ViewController: NSViewController {
 
@@ -15,6 +14,14 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
+            self.keyDown(with: event)
+            return event
+        }
+    }
+
+    override func keyDown(with event: NSEvent) {
+        print("key press: \(event.characters)")
     }
 
     override var representedObject: Any? {
@@ -22,7 +29,5 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 
