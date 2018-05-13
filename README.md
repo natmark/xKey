@@ -62,11 +62,11 @@ enum KeyLoggerType {
 
 
 ## Instration
-### [CocoaPods](http://cocoadocs.org/docsets/xKey/)
+### [CocoaPods](http://cocoapods.org/pods/XKey)
 Add the following to your `Podfile`:
 ```
-  pod "xKey"
-  pod "xKey"
+  pod "XKey"
+  pod "XKey"
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
