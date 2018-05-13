@@ -19,6 +19,47 @@ xKey is a Cocoa key handler extension for OSX written in Swift :penguin:
 
 
 ## Usage
+Write below code in `AppDelegate.swift`.
+
+```swift
+import XKey
+
+@NSApplicationMain
+class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        XKey.shared.extend() // Insert this line into your AppDelegate.
+    }
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+    }
+}
+```
+
+## Option
+- `enabled`
+```swift
+XKey.enabled = true // enabled xKey
+XKey.enabled = false // disabled xKey
+```
+
+- `logger`
+```swift
+XKey.logger = [.keyDown(.characters)] // output pressed key's character when key downed
+XKey.logger = [.keyDown(.keyCode), .keyUp(.keyCode)] // output keyCode when keyDown and keyUp
+```
+```swift
+enum KeyLogger {
+    case keyDown(KeyLoggerType)
+    case keyUp(KeyLoggerType)
+}
+
+enum KeyLoggerType {
+    case keyCode
+    case characters
+    case charactersIgnoringModifiers
+}
+```
+
 
 ## Instration
 ### [CocoaPods](http://cocoadocs.org/docsets/xKey/)
