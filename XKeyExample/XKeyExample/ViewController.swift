@@ -67,6 +67,10 @@ class ViewController: NSViewController {
         keyCodes.insert(event.keyCode)
     }
 
+    @IBAction func didTap(_ sender: NSButton) {
+        textView.string = ""
+    }
+
     @IBAction func didChange(_ sender: NSSegmentedControl) {
         if sender.indexOfSelectedItem == 0 {
             XKey.enabled = true
@@ -79,8 +83,8 @@ class ViewController: NSViewController {
 
 extension ViewController: XKeyDelegate {
     func xKey(_ xKey: XKey, logger log: String) {
-        textView.string += "\n"
         textView.string += log
+        textView.string += "\n"
         textView.scrollRangeToVisible(NSRange(location: textView.string.count, length: 0))
     }
 }
