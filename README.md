@@ -66,13 +66,11 @@ enum KeyLoggerType {
 Add the following to your `Podfile`:
 ```
   pod "XKey"
-  pod "XKey"
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 Add the following to your `Cartfile`:
 ```
-  github "natmark/xKey"
   github "natmark/xKey"
 ```
 
